@@ -47,5 +47,5 @@ The results of training for QRS Axis (in degrees) prediction dependin on age is 
 1. Date, P., Potok, T. Adiabatic quantum linear regression. Sci Rep 11, 21905 (2021). https://doi.org/10.1038/s41598-021-01445-6
 2. Giovanardi, P.; Vernia, C.; Tincani, E.; Giberti, C.; Silipo, F.; Fabbo, A. Combined Effects of Age and Comorbidities on Electrocardiographic Parameters in a Large Non-Selected Population. J. Clin. Med. 2022, 11, 3737. https://doi.org/10.3390/jcm11133737 
 3. Zheng, Jianwei; Rakovski, Cyril; Danioko, Sidy; Zhang, Jianming; Yao, Hai; Hangyuan, Guo (2019): A 12-lead electrocardiogram database for arrhythmia research covering more than 10,000 patients. figshare. Collection. https://doi.org/10.6084/m9.figshare.c.4560497
-4. https://www.physoc.org/magazine-articles/trigonometry-of-the-ecg/
-5. https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database
+4. Dahl, R., Berg R. Trigonometry of the ECG. https://www.physoc.org/magazine-articles/trigonometry-of-the-ecg/
+5. Electrocardiography (ECG) Signals Database. https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database
