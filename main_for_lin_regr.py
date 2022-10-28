@@ -29,6 +29,7 @@ if __name__ == "__main__":
     age, qrs = get_data_for_training("QRSAxis") #get data
 
     # define and train an adiabatic Linear regresson.
+    print("Initialize and train Quantum Linear Regression . . .")
     qrs_lin_regression = QALinearRegression()
     qrs_lin_regression.train(age.reshape(-1, 1), qrs)
 
@@ -39,11 +40,12 @@ if __name__ == "__main__":
     # print("qrs_predicted by quantum = ", qrs_predicted)
 
     # compare to a classical linear regression in Scikit-learn
+    print("Initialize and train Classical Linear Regression . . .")
     model= LinearRegression()
     trained_model = model.fit(age.reshape(-1, 1), qrs)
     y_predict = trained_model.predict(age.reshape(-1,1))
-    print("predicted by linear = ", y_predict)
-    print("model coeff = ", model.coef_)
+    # print("predicted by linear = ", y_predict)
+    # print("model coeff = ", model.coef_)
 
     # plat and save file
     plt.scatter(age, qrs)
@@ -55,6 +57,7 @@ if __name__ == "__main__":
     plt.show()
 
     # model verification.
+    print("Evaluate Quantum Linear Regression . . .")
     age_verif = np.array([58, 76, 79, 57, 52, 56, 73, 50, 33, 68, 70, 53])
     qrs_axis_actual = np.array([-20, 34, 42, 45, 30, 16, 12, 30, 35, 53, 55, 2])
 
