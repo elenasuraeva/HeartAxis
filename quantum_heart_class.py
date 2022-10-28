@@ -1,4 +1,4 @@
-# Elena Suraeva. Email: elenasuraeva21@gmail.com
+# Author: Elena Suraeva. Email: elenasuraeva21@gmail.com
 
 from qiskit import QuantumRegister, QuantumCircuit, execute
 import numpy as np
