@@ -71,9 +71,13 @@ The results of training for QRS Axis (in degrees) prediction depending on age is
 We used the data from other data set avaliable [here](dataset/axis_calculation) to evaluate the model. The data was processed in a similar way as for the model training. 
 
 Adiabatic Linear Regression Evaluation Metrics.
+    
 MAE of the model is 29.3.
+    
 MSE of the model is 10277.6.
+    
 RMSE of the model is 101.4.
+    
 R^2 of the model is 0.045.
 
 # Authors
