@@ -16,8 +16,8 @@ QRS axis is one of key characteristics of electrocardiogram. Its evaluation or c
 
 The algorithm is implemented in Qiskit using noise-free statevector simulator. Data is taken from open access database on Kaggle. The dataset can be found [here](https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database) or in the ![dataset](dataset/axis_calculation) subdirectory. The database containes noise free signals, so there are no need to run noise reducing algorithms.
 
-The Qiskit code implementation for the heart axis calculation is avaliable in python class in <quantum_heart_class.py> file. 
-To run the calculations, initialize the <QauntumHeart> class and call the <get_qrs_axis()> method of the class:
+The Qiskit code implementation for the heart axis calculation is avaliable in python class in ``quantum_heart_class.py``  file. 
+To run the calculations, initialize the <QauntumHeart> class and call the ``get_qrs_axis()`` method of the class:
 
     qrs_axis = QuantumHeart()
     qrs_angle = qrs_axis.get_qrs_axis(ECG_I, ECG_aVF)
@@ -31,7 +31,7 @@ To run the entire experiemnt for the heart axis calculation on IBM quantum devic
 
 The Team has implemented a linear regression model as descibed in *Adiabatic quantum linear regression* research paper by P. Date and T. Protok. The code implementation is similar to the classical ML frameworks. However, the loss-function optimization has been adopted and implemented in such a way that it could be submitted to DWave Quantum Annealers. The Qauntum Annealer minimizes the loss and returns a distribution of possible linear regressions. We tested our ptototype as the Simulated Annealing only, due to the lack of an access to DWave's Quantum Hardware.  
 
-The Addiabatic Linear Regression model is used in a similar way as its counterparts avaliable in Scikit-learn framework. The code implementation is avaliable in <annealing_lin_regression.py>, <annealing_optimizer.py> files in <linear> subdirectory.
+The Addiabatic Linear Regression model is used in a similar way as its counterparts avaliable in Scikit-learn framework. The code implementation is avaliable in ``annealing_lin_regression.py``, ``annealing_optimizer.py`` files in ``linear`` subdirectory.
 
 The following line initializes the model as Addiabatic Linear Regression:
 
@@ -49,7 +49,7 @@ We also implemented the metrics such as MAE, RMAE, and MSE.
 
 *Note:* Given the probabilistic nature of Qauntum Annealers, we have to controll an exta parameter defined as "precision vector" and described in the research paper by P. Date and T. Protok. 
 
-All steps are compossed in <main_for_lin_regr.py> file. To obtain the results of the Quantum Linear Regression, simple execute the code in <main_for_lin_regr.py> file:
+All steps are compossed in ``main_for_lin_regr.py`` file. To obtain the results of the Quantum Linear Regression, simple execute the code in ``main_for_lin_regr.py`` file:
 
     python3  main_for_lin_regr.py
 
