@@ -68,7 +68,7 @@ Since many characteristics of a human heart has non-linear properties, we select
 The results of training for QRS Axis (in degrees) prediction depending on age is depicted on the graph below. 
 ![QRS Sol](results/quantum_vs_classical_qrs_axis.png)
 
-We used the data from other data set avaliable [here](dataset/axis_calculation) to evaluate the model. The data was processed in a similar way as for the model training. 
+We used the data from other data set avaliable [here](dataset/axis_calculation) to evaluate the model. The data was proccessed in a similar way as for the model training. 
 
 Adiabatic Linear Regression Evaluation Metrics.
     
