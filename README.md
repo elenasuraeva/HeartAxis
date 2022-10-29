@@ -81,8 +81,8 @@ RMSE of the model is 101.4.
 R^2 of the model is 0.045.
 
 # Authors
-[Elena Suraeva, PhD](https://github.com/elenasuraeva)
-[Olga Okrut](https://github.com/olgOk)
+1. [Elena Suraeva, PhD](https://github.com/elenasuraeva)
+2. [Olga Okrut](https://github.com/olgOk)
 
 # License
 This work is licensed under the [Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0) and is owned by [Elena Suraeve](https://github.com/elenasuraeva) and [Olga Okrut](https://github.com/olgOk) 
