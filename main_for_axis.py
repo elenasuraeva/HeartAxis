@@ -5,18 +5,6 @@ import os
 from quantum_heart_class import QuantumHeart
 from scipy.io import loadmat
 from scipy.signal import find_peaks
-
-def get_data():
-    """Iterate over directory and get ECG signals.
-    """
-    directory = "dataset/axis_calculation/"
-
-    for filename in os.listdir(directory):
-        f = os.path.join(directory, filename)
-        # checking if it is a file
-        if os.path.isfile(f):
-            print(f)
-            ECG = loadmat(f)['val']
             
 
 
