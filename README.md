@@ -14,7 +14,7 @@ QRS axis is one of key characteristics of electrocardiogram. Its evaluation or c
 ![](results/ry_rotation.PNG)
 ![](results/rx_rotation.PNG)
 
-The algorithm is implemented in Qiskit using noise-free statevector simulator. Data is taken from open access database on Kaggle. The dataset can be found [here](https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database) or in the ![dataset](datasets/axis_calculation) subdirectory. The database containes noise free signals, so there are no need to run noise reducing algorithms.
+The algorithm is implemented in Qiskit using noise-free statevector simulator. Data is taken from open access database on Kaggle. The dataset can be found [here](https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database) or in the ![dataset](dataset/axis_calculation) subdirectory. The database containes noise free signals, so there are no need to run noise reducing algorithms.
 
 The Qiskit code implementation for the heart axis calculation is avaliable in python class in <quantum_heart_class.py> file. 
 To run the calculations, initialize the <QauntumHeart> class and call the <get_qrs_axis()> method of the class:
