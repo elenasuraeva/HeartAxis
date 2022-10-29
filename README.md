@@ -65,7 +65,7 @@ For the Addiabatic Linear Regression training, we used to filter the database to
 Since many characteristics of a human heart has non-linear properties, we selected only the data that posses strong linear patterns such as the depenecy of QRS Axix from age of patients. 
 
 # Mean QRS Axis Prediction on Qauntum Hardware. Prototype Phase.
-The results of training for QRS Axis (in degrees) prediction dependin on age is depicted on the graph below. 
+The results of training for QRS Axis (in degrees) prediction depending on age is depicted on the graph below. 
 ![QRS Sol](results/quantum_vs_classical_qrs_axis.png)
 
 We used the data from other data set avaliable [here]() to evaluate the model. The data was processed in a similar way as for the model trainig. 
