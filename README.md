@@ -17,6 +17,10 @@ QRS axis is one of key characteristics of electrocardiogram. Its evaluation or c
 The algorithm is implemented in Qiskit using noise-free statevector simulator. Data is taken from open access database on Kaggle. The dataset can be found [here](https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database) or in the ![dataset](dataset/axis_calculation) subdirectory. The database containes noise free signals, so there are no need to run noise reducing algorithms.
 
 ## How To
+Before making calculations on your local machine, make sure Qiskit is installed:
+
+    python3 -m pip install qiskit
+
 The Qiskit code implementation for the heart axis calculation is avaliable in python class in ``quantum_heart_class.py``  file. 
 To run the calculations, initialize the <QauntumHeart> class and call the ``get_qrs_axis()`` method of the class:
 
@@ -35,6 +39,12 @@ The Team has implemented a linear regression model as descibed in *Adiabatic qua
 The Addiabatic Linear Regression model is used in a similar way as its counterparts avaliable in Scikit-learn framework. The code implementation is avaliable in ``annealing_lin_regression.py``, ``annealing_optimizer.py`` files in ``linear`` subdirectory.
 
 ## How To
+
+To make calculations on a local machine, make sure DWave Ocean SDK is installed:
+
+    python3 -m pip install dwave-ocean-sdk
+    python3 -m pip install dwave-neal
+
 The following line initializes the model as Addiabatic Linear Regression:
 
     addiabatic_lin_model = QALinearRegression()
