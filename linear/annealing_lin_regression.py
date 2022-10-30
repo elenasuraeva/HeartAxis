@@ -62,10 +62,8 @@ class QALinearRegression():
         # # this values of the precision vector worked for QRS Axis
         p_vector = np.array([ -0.0625, -0.03125, -0.015625, -0.0078125, 0.015625, 0.03125, 0.0625, 0.125])
 
-        # this values of the precision vector worked for QRS Duration
-        # p_vector = np.array([-0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625,0.1875, 0.1875])  
-
-        # p_vector = np.array([ -0.0625, -0.03125, 0.03125, 0.0625, 0.0625, 0.0625, 0.125, 0.125])
+        # for artificial data
+        # p_vector = np.array([0.25, 0.25, 0.5, 0.5, 0.75])
         # issue with dimention
         # temporarly, set dimention to 2, change later
         dimention = 2 
