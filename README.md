@@ -34,7 +34,7 @@ To run the entire experiemnt for the heart axis calculation on IBM quantum devic
 
 # Linear Regression Model on DWave Qauntum Annealers. Prototype Phase.
 
-The Team has implemented a linear regression model as descibed in *Adiabatic quantum linear regression* research paper by P. Date and T. Protok. The code implementation is similar to the classical ML frameworks. However, the loss-function optimization has been adopted and implemented in such a way that it could be submitted to DWave Quantum Annealers. The Qauntum Annealer minimizes the loss and returns a distribution of possible linear regressions. We tested our ptototype as the Simulated Annealing only, due to the lack of an access to DWave's Quantum Hardware.  
+The Team has implemented a linear regression model as descibed in *Adiabatic quantum linear regression* research paper by P. Date and T. Protok. The code implementation is similar to the classical ML frameworks. However, the loss-function optimization has been adopted and implemented in such a way that it could be submitted to DWave Quantum Annealers. The Quantum Annealer minimizes the loss and returns a distribution of possible linear regressions. We tested our ptototype as the Simulated Annealing only, due to the lack of an access to DWave's Quantum Hardware.  
 
 The Addiabatic Linear Regression model is used in a similar way as its counterparts avaliable in Scikit-learn framework. The code implementation is avaliable in ``annealing_lin_regression.py``, ``annealing_optimizer.py`` files in ``linear`` subdirectory.
 
