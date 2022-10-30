@@ -10,7 +10,9 @@ Theme: Compute the mean electric axis of the heart on IBM quantum hardaware. Mak
 # Mean Axis Calculation on Qauntum Hardware. Prototype Phase.
 QRS axis is one of key characteristics of electrocardiogram. Its evaluation or calculation can be performed in several ways the most precise is based on hexaxial reference (Cabrera) system. We use a Novosel formula taken from *Trigonometry of the ECG: A formula for the mean electrical axis of the heart* by Dahl and Berg. It processes two ECG leads, bipolar I and unipolar aVF. Their orthogonality to each other makes the procedure more easier so only RX and RY gates would be involved to create a basis for measurements. Another one simplification is using only voltage extrema without any summing. Their difference equals to signal amplitude that marks on circle of axes. We encode magnitudes as vector projections on equatorial plane when mapping on Bloch sphere. It is equal to inclination in small-angle approximation which is possible for scale factor 1e-04. Note that we use standart positive counterclokwise rotation instead of the clockwise one in a Cabrera system. If I and aVF vectors are near |0> and |1> respectively the direction we are looking for is a bisector of the vectors that is close to XOY phase plane. It also corresponds to a maximal sum probability of relevant measurements in non-orthogonal basis {I, aVF}.
 
-![](results/initial_state.png)
+![](results/projections.png)
+![](results/phase.png)
+
 ![](results/ry_rotation.png)
 ![](results/rx_rotation.png)
 
