@@ -11,7 +11,7 @@ if __name__ == "__main__":
     
     # small test on artificial data. Change the precision vector before running.
 
-    # define a random dataset for a qa linear regression to test
+    # # define a random dataset for a qa linear regression to test
     # seed = 11
     # rand_state = 11
     # rand= np.random.RandomState(seed)   
@@ -20,10 +20,20 @@ if __name__ == "__main__":
     # # define a qa linear regression
     # qa_lin_model = QALinearRegression()
     # qa_lin_model.train(x_points, y_labels)
-    
-    # x_test = np.array([ 3.4]).reshape(-1, 1)
-    # y_predicted = qa_lin_model.predict(x_test)
+    # y_predicted = qa_lin_model.predict(x_points)
     # print("y_predicted = ", y_predicted)
+
+    # model = LinearRegression()
+    # trained_model = model.fit(x_points, y_labels)
+    # y_predict_classical = trained_model.predict(x_points)
+    # # # plot and save file
+    # plt.scatter(x_points, y_labels)
+    # plt.plot(x_points, y_predict_classical, color='pink', linewidth=3, label='Classical')
+    # plt.plot(x_points, y_predicted, color='green', linewidth=1, label='Quantum')
+    # plt.legend(loc='upper left')
+    # plt.title("Adiabatic vs Classical Linear Regression on Artificial Data")
+    # plt.savefig("results/artificial.png")
+    # plt.show()
 
 
     age, qrs = get_data_for_training("QRSAxis") #get data
