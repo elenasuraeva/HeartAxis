@@ -84,13 +84,15 @@ We used the data from other data set avaliable [here](dataset/axis_calculation) 
 
 Adiabatic Linear Regression Evaluation Metrics.
     
-MAE of the model is 29.3.
+MAE of the model is 5.7.
     
-MSE of the model is 10277.6.
+MSE of the model is 517.2.
     
-RMSE of the model is 101.4.
+RMSE of the model is 22.7.
     
-R^2 of the model is 0.045.
+R^2 of the model is  0.7766126088005979.
+
+To compare, the Scikit-Learn framework performs with the $r^2 =  0.776612608800598$ on the same training dataset. 
 
 # Authors
 1. [Elena Suraeva, PhD](https://github.com/elenasuraeva)
