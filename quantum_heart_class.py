@@ -35,7 +35,9 @@ class QuantumHeart:
         result = job.result()
         statevector = result.get_statevector()
 
-        probability = abs(statevector.data)
+        # alternative
+        # probability = abs(statevector.data)
+        probability = abs(statevector)
         return probability
 
     def get_qrs_axis(self, ecg_i:np.array, ecg_avf:np.array) -> int:
@@ -62,7 +64,7 @@ class QuantumHeart:
             peaks, _ = find_peaks(ecg_avf, prominence=500)
         if peaks.size == 0:
             peaks, _ = find_peaks(-ecg_avf, prominence=500)
-        peak_idx = randint(0, len(peaks))
+        peak_idx = 8 #randint(0, len(peaks))
 
         # if issue in dataset occures, return None
         try:
