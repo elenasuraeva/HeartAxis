@@ -1,5 +1,5 @@
 # Overview
-The repository containes the work done during the [Quantum Science and Technology Hackathon 2022](https://quantum-science-and-technology-hackathon-2022.hackerearth.com/) under the category of *Life Sceinces*. 
+The repository containes the work done during the [Quantum Science and Technology Hackathon 2022](https://quantum-science-and-technology-hackathon-2022.hackerearth.com/) under the category of *Life Sceinces* and won the third place.
 
 Theme: Compute the mean electric axis of the heart on IBM quantum hardaware. Make the heart axis prediction using the DWave Quantum Annealers.
 
