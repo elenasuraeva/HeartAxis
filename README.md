@@ -7,7 +7,7 @@ Theme: Compute the mean electric axis of the heart on IBM quantum hardaware. Mak
 1. IBM Quantum, [IBM Qiskit](https://qiskit.org/)
 2. Dwave Simulated Annealing, [Ocean SDK](https://docs.ocean.dwavesys.com/en/stable/)
 
-# Mean Axis Calculation on Qauntum Hardware. Prototype Phase.
+# Mean Axis Calculation on Quantum Hardware. Prototype Phase.
 QRS axis is one of key characteristics of electrocardiogram. Its evaluation or calculation can be performed in several ways the most precise is based on hexaxial reference (Cabrera) system. We use a Novosel formula taken from *Trigonometry of the ECG: A formula for the mean electrical axis of the heart* by Dahl and Berg. It processes two ECG leads, bipolar I and unipolar aVF. Their orthogonality to each other makes the procedure more easier so only RX and RY gates would be involved to create a basis for measurements. Another one simplification is using only voltage extrema without any summing. Their difference equals to signal amplitude that marks on circle of axes. We encode magnitudes as vector projections on equatorial plane when mapping on Bloch sphere. It is equal to inclination in small-angle approximation which is possible for scale factor 1e-04. Note that we use standart positive counterclokwise rotation instead of the clockwise one in a Cabrera system. If I and aVF vectors are near |0> and |1> respectively the direction we are looking for is a bisector of the vectors that is close to XOY phase plane. It also corresponds to a maximal sum probability of relevant measurements in non-orthogonal basis {I, aVF}.
 
 ![](results/projections.png)
@@ -18,13 +18,16 @@ QRS axis is one of key characteristics of electrocardiogram. Its evaluation or c
 
 The algorithm is implemented in Qiskit using noise-free statevector simulator. Data is taken from open access database on Kaggle. The dataset can be found [here](https://www.kaggle.com/datasets/scipygaurav/electrocardiography-ecg-signals-database) or in the ![dataset](dataset/axis_calculation) subdirectory. The database containes noise free signals, so there are no need to run noise reducing algorithms.
 
-## How To
-Before making calculations on your local machine, make sure Qiskit is installed:
+## Installation
 
-    python3 -m pip install qiskit
+For a local installation, ideally in a virtual environment, run:
+
+    pip install -r requirements.txt
+
+## How To
 
 The Qiskit code implementation for the heart axis calculation is avaliable in python class in ``quantum_heart_class.py``  file. 
-To run the calculations, initialize the <QauntumHeart> class and call the ``get_qrs_axis()`` method of the class:
+To run the calculations, initialize the <QuantumHeart> class and call the ``get_qrs_axis()`` method of the class:
 
     qrs_axis = QuantumHeart()
     qrs_angle = qrs_axis.get_qrs_axis(ECG_I, ECG_aVF)
@@ -34,18 +37,13 @@ To run the entire experiemnt for the heart axis calculation on IBM quantum devic
 
     python3  main_for_axis.py
 
-# Linear Regression Model on DWave Qauntum Annealers. Prototype Phase.
+# Linear Regression Model on DWave Quantum Annealers. Prototype Phase.
 
 The Team has implemented a linear regression model as descibed in *Adiabatic quantum linear regression* research paper by P. Date and T. Protok. The code implementation is similar to the classical ML frameworks. However, the loss-function optimization has been adopted and implemented in such a way that it could be submitted to DWave Quantum Annealers. The Quantum Annealer minimizes the loss and returns a distribution of possible linear regressions. We tested our ptototype as the Simulated Annealing only, due to the lack of an access to DWave's Quantum Hardware.  
 
 The Addiabatic Linear Regression model is used in a similar way as its counterparts avaliable in Scikit-learn framework. The code implementation is avaliable in ``annealing_lin_regression.py``, ``annealing_optimizer.py`` files in ``linear`` subdirectory.
 
 ## How To
-
-To make calculations on a local machine, make sure DWave Ocean SDK is installed:
-
-    python3 -m pip install dwave-ocean-sdk
-    python3 -m pip install dwave-neal
 
 The following line initializes the model as Addiabatic Linear Regression:
 
@@ -61,7 +59,7 @@ Finally, to make prediction:
 
 We also implemented the metrics such as MAE, RMAE, and MSE. 
 
-*Note:* Given the probabilistic nature of Qauntum Annealers, we have to controll an exta parameter defined as "precision vector" and described in the research paper by P. Date and T. Protok. 
+*Note:* Given the probabilistic nature of Quantum Annealers, we have to controll an exta parameter defined as "precision vector" and described in the research paper by P. Date and T. Protok. 
 
 All steps are compossed in ``main_for_lin_regr.py`` file. To obtain the results of the Quantum Linear Regression, simple execute the code in ``main_for_lin_regr.py`` file:
 
@@ -76,7 +74,7 @@ For the Addiabatic Linear Regression training, we used to filter the database to
 
 Since many characteristics of a human heart has non-linear properties, we selected only the data that posses strong linear patterns such as the depenecy of QRS Axix from age of patients. 
 
-# Mean QRS Axis Prediction on Qauntum Hardware. Prototype Phase.
+# Mean QRS Axis Prediction on Quantum Hardware. Prototype Phase.
 The results of training for QRS Axis (in degrees) prediction depending on age is depicted on the graph below. 
 ![QRS Sol](results/quantum_vs_classical_qrs_axis.png)
 
