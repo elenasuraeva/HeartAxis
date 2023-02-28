@@ -75,22 +75,29 @@ For the Addiabatic Linear Regression training, we used to filter the database to
 Since many characteristics of a human heart has non-linear properties, we selected only the data that posses strong linear patterns such as the depenecy of QRS Axix from age of patients. 
 
 # Mean QRS Axis Prediction on Quantum Hardware. Prototype Phase.
+
 The results of training for QRS Axis (in degrees) prediction depending on age is depicted on the graph below. 
-![QRS Sol](results/quantum_vs_classical_qrs_axis.png)
+![QRS Sol](results/sklearn_vs_adiabatic.png)
 
 We used the data from other data set avaliable [here](dataset/axis_calculation) to evaluate the model. The data was proccessed in a similar way as for the model training. 
 
-Adiabatic Linear Regression Evaluation Metrics.
-    
-MAE of the model is 5.7.
-    
-MSE of the model is 517.2.
-    
-RMSE of the model is 22.7.
-    
-R^2 of the model is  0.7766126088005979.
+Linear Regressions Training Metrics.
+        
+    R^2 of the Adiabatic Linear Regression is 0.8898309926203356.
 
-To compare, the Scikit-Learn framework performs with the $r^2 =  0.776612608800598$ on the same training dataset. 
+    R^2 of the Sklearn Linear Regression is 0.94383692314776.
+
+Linear Regressions Evaluation Metrics.
+
+    MAE of the Adiabatic Linear Regression is 7.581347240389968.
+
+    MSE of the Adiabatic Linear Regression is  229.90730391747437.
+
+    Root MSE of the Adiabatic Linear Regression is  15.162694480779937.
+        
+    R^2 of the Adiabatic Linear Regression is 0.4043312141285681.
+
+    R^2 of the Sklearn Linear Regression is 0.14291769531049192.
 
 # Authors
 1. [Elena Suraeva, PhD](https://github.com/elenasuraeva)
