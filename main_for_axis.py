@@ -1,5 +1,5 @@
-# Elena Suraeva. Email: elenasuraeva21@gmail.com
-# Authors: Olga Okrut. Email:vokrut42sv@gmail.com
+# Elena Suraeva. GitHub: elenasuraeva
+# Olga Okrut. GitHub: olgOk
 
 import os
 from quantum_heart_class import QuantumHeart
