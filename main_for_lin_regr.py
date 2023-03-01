@@ -1,4 +1,4 @@
-# author: Olga Okrut. Email: vokrut42sv@gmail.com
+# author: Olga Okrut. GitHub: olgOk
 
 import numpy as np
 import sklearn.datasets as dt
