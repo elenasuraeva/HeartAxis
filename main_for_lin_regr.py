@@ -10,8 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 
 if __name__ == "__main__":
-    
-    #TODO: implement train-test split
+
     age, qrs = get_data_for_training("QRSAxis") #get data
 
     age_train, age_test, qrs_train, qrs_test = train_test_split(age, qrs, test_size=0.25, random_state=42) 
