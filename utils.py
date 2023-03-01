@@ -1,6 +1,6 @@
 # Authors
-# Olga Okrut. Email: vokrut42sv@gmail.com
-# Elena Suraeva. Email: elenasuraeva21@gmail.com
+# Olga Okrut. GitHub: olgOk
+# Elena Suraeva. GitHub: elenasuraeva
 
 import pandas as pd
 import numpy as np
@@ -122,6 +122,13 @@ def get_qrs_axis(df_end):
     """
     Calcualtes age and QRS Axis for different age groups. 
     The result is the mean value for each age group.
+
+    Args: 
+        df_end: a pandas dataframe with the records.
+    
+    Returns:
+        age: a sorted np.array with the patient ages
+        qrsaxis: a sorted np.array with the patient measurements on QRS axis.
     """
     df_normal = pd.DataFrame(columns=[ 'Age', 'QTc', 'QRSDuration', 'QRSAxis'])
     for index in df_end.index:
@@ -145,6 +152,13 @@ def get_qrs_duration(df_end):
     """
     Calcualtes age and QRS Duration for different age groups. 
     The result is the mean value for each age group.
+
+    Args: 
+        df_end: a pandas dataframe with the records.
+    
+    Returns:
+        age: a sorted np.array with the patient ages
+        qrs_duration: a sorted np.array with the patient measurements on QRS duration.
     """
     df_normal = pd.DataFrame(columns=[ 'Age', 'QTc', 'QRSDuration', 'QRSAxis'])
 
@@ -170,6 +184,12 @@ def get_qts(df_end):
     """
     Calcualtes age and Qtc for different age groups. 
     The result is the mean value for each age group.
+    Args: 
+        df_end: a pandas dataframe with the records.
+    
+    Returns:
+        age: a sorted np.array with the patient ages
+        qtc: a sorted np.array with the patient measurements on QTC axis.
     """
     df_normal = pd.DataFrame(columns=[ 'Age', 'QTc', 'QRSDuration', 'QRSAxis'])
     for index in df_end.index:
@@ -198,7 +218,10 @@ def get_data_for_training(parameter:str):
         Normal QRS Duration is in between 0.08 and 0.10 seconds (or from 80 to 100 milliseconds).
         Normal QTc duration is in range of 0.36 to 0.44 seconds (or from 360 to 440 miliseconds).
         Args:
+            parameter: a string of a heart charachteristic - QRSAxis, QRSDuration, QTc.
         Returns:
+            age: a np.array with patient ages
+            heart parameter: a np.array containing any of QRSAxis, or QRSDuration, or QTc.
     """
 
     with open('dataset/train_data.json') as file:
